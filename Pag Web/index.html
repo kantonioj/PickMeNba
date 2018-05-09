@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+  <title>PickMeNba</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+  <!-- bootstrap-daterangepicker -->
+  <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="build/css/custom.min.css" rel="stylesheet">
+
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><i class="fas fa-basketball-ball"></i> <span>PickMeNba</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fas fa-globe"></i> NBA <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="teams.html">Equipos</a></li>
+                    <li><a href="index3.html">Jugadores</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fas fa-chart-area"></i> Simuladores <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="form.html">Simulador 1</a></li>
+                    <li><a href="form_advanced.html">Simulador 2</a></li>
+                    <li><a href="form_validation.html">Simulador 3</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fas fa-chart-pie"></i> Comparativas <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="CompTeams.html">Entre emquipos</a></li>
+                    <li><a href="CompTeams.html">Entre Jugadores</a></li>
+                  </ul>
+                </div>
+
+              </div>
+              <!-- /sidebar menu -->
+
+              <!-- /menu footer buttons -->
+              <div class="sidebar-footer hidden-small">
+                <a data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                  <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                  <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                  <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
+              </div>
+              <!-- /menu footer buttons -->
+            </div>
+          </div>
+
+          <!-- top navigation -->
+          <div class="top_nav">
+            <div class="nav_menu">
+              <nav>
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <!-- top tiles -->
+            <div class="row tile_count">
+              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fas fa-users"></i> Total de equipos</span>
+                <div class="count">30</div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fas fa-user"></i> Total de jugadores</span>
+                <div class="count">584</div>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fas fa-basketball-ball"></i> Total de partidos</span>
+                <div class="count green">32</div>
+              </div>
+            </div>
+            <!-- /top tiles -->
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 text-center jumbotron" style="padding: 5px 60px;">
+                <h1>Últimos Partidos <i class="fas fa-clipboard-list"></i></h1>
+              </div>
+
+              <div class="row text-center x_panel" style="margin: 0;">
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-1 col-xs-1">
+                  VS
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+              </div>
+
+              <div class="row text-center x_panel" style="margin: 0;">
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-1 col-xs-1">
+                  VS
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+              </div>
+
+              <div class="row text-center x_panel" style="margin: 0;">
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-1 col-xs-1">
+                  VS
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p>Nombre</p>
+                  <p>Score</p>
+                </div>
+                <div class="col-md-2 col-xs-2">
+                  Logo
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="dashboard_graph">
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center jumbotron" style="padding: 5px 60px;">
+                  <h1><i class="fas fa-trophy"></i> Top 3 <i class="fas fa-trophy"></i></h1>
+                </div>
+                <h3>Equipos</h3>
+                <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <div class="text-right">
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                      </div>
+                      <h2>[logo] Nombre de equipo</h2>
+                      <div class="clearfix"></div>
+                    </div>
+
+                    <div class="x_content" style="display: block;">
+                      <div class="text-center">
+                        <h4>Rendimiento</h4>
+                        <span class="chart" data-percent="95">
+                          <span class="percent">95</span>
+                          <canvas height="110" width="110"></canvas></span>
+                        </div>
+                        <div class="text-center">
+                          <h3>Stats</h3>
+                        </div>
+                        <table class="countries_list">
+                          <tbody>
+                            <tr>
+                              <td>Partidos</td>
+                              <td class="fs15 fw700 text-right">30</td>
+                            </tr>
+                            <tr>
+                              <td>Puntos</td>
+                              <td class="fs15 fw700 text-right">215</td>
+                            </tr>
+                            <tr>
+                              <td>Valor</td>
+                              <td class="fs15 fw700 text-right">55</td>
+                            </tr>
+                            <tr>
+                              <td>Valor</td>
+                              <td class="fs15 fw700 text-right">55</td>
+                            </tr>
+                            <tr>
+                              <td>Valor</td>
+                              <td class="fs15 fw700 text-right">55</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <div class="text-right">
+                          <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                        </div>
+                        <h2>[logo] Nombre de equipo</h2>
+                        <div class="clearfix"></div>
+                      </div>
+
+                      <div class="x_content" style="display: block;">
+                        <div class="text-center">
+                          <h4>Rendimiento</h4>
+                          <span class="chart" data-percent="95">
+                            <span class="percent">95</span>
+                            <canvas height="110" width="110"></canvas></span>
+                          </div>
+                          <div class="text-center">
+                            <h3>Stats</h3>
+                          </div>
+                          <table class="countries_list">
+                            <tbody>
+                              <tr>
+                                <td>Partidos</td>
+                                <td class="fs15 fw700 text-right">30</td>
+                              </tr>
+                              <tr>
+                                <td>Puntos</td>
+                                <td class="fs15 fw700 text-right">215</td>
+                              </tr>
+                              <tr>
+                                <td>Valor</td>
+                                <td class="fs15 fw700 text-right">55</td>
+                              </tr>
+                              <tr>
+                                <td>Valor</td>
+                                <td class="fs15 fw700 text-right">55</td>
+                              </tr>
+                              <tr>
+                                <td>Valor</td>
+                                <td class="fs15 fw700 text-right">55</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                      <div class="x_panel">
+                        <div class="x_title">
+                          <div class="text-right">
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                          </div>
+                          <h2>[logo] Nombre de equipo</h2>
+                          <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content" style="display: block;">
+                          <div class="text-center">
+                            <h4>Rendimiento</h4>
+                            <span class="chart" data-percent="95">
+                              <span class="percent">95</span>
+                              <canvas height="110" width="110"></canvas></span>
+                            </div>
+                            <div class="text-center">
+                              <h3>Stats</h3>
+                            </div>
+                            <table class="countries_list">
+                              <tbody>
+                                <tr>
+                                  <td>Partidos</td>
+                                  <td class="fs15 fw700 text-right">30</td>
+                                </tr>
+                                <tr>
+                                  <td>Puntos</td>
+                                  <td class="fs15 fw700 text-right">215</td>
+                                </tr>
+                                <tr>
+                                  <td>Valor</td>
+                                  <td class="fs15 fw700 text-right">55</td>
+                                </tr>
+                                <tr>
+                                  <td>Valor</td>
+                                  <td class="fs15 fw700 text-right">55</td>
+                                </tr>
+                                <tr>
+                                  <td>Valor</td>
+                                  <td class="fs15 fw700 text-right">55</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h3>Jugadores</h3>
+                    <div class="dashboard_graph">
+                      <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <div class="text-right">
+                              <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                            </div>
+                            <h2>[logo] Nombre del jugador</h2>
+                            <div class="clearfix"></div>
+                          </div>
+
+                          <div class="x_content" style="display: block;">
+                            <div class="text-center">
+                              <h4>Rendimiento</h4>
+                              <span class="chart" data-percent="95">
+                                <span class="percent">95</span>
+                                <canvas height="110" width="110"></canvas></span>
+                              </div>
+                              <div class="text-center">
+                                <h3>Stats</h3>
+                              </div>
+                              <table class="countries_list">
+                                <tbody>
+                                  <tr>
+                                    <td>Partidos</td>
+                                    <td class="fs15 fw700 text-right">30</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Puntos</td>
+                                    <td class="fs15 fw700 text-right">215</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Valor</td>
+                                    <td class="fs15 fw700 text-right">55</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Valor</td>
+                                    <td class="fs15 fw700 text-right">55</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Valor</td>
+                                    <td class="fs15 fw700 text-right">55</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <div class="text-right">
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                              </div>
+                              <h2>[logo] Nombre del jugador</h2>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content" style="display: block;">
+                              <div class="text-center">
+                                <h4>Rendimiento</h4>
+                                <span class="chart" data-percent="95">
+                                  <span class="percent">95</span>
+                                  <canvas height="110" width="110"></canvas></span>
+                                </div>
+                                <div class="text-center">
+                                  <h3>Stats</h3>
+                                </div>
+                                <table class="countries_list">
+                                  <tbody>
+                                    <tr>
+                                      <td>Partidos</td>
+                                      <td class="fs15 fw700 text-right">30</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Puntos</td>
+                                      <td class="fs15 fw700 text-right">215</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Valor</td>
+                                      <td class="fs15 fw700 text-right">55</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Valor</td>
+                                      <td class="fs15 fw700 text-right">55</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Valor</td>
+                                      <td class="fs15 fw700 text-right">55</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-4 col-xs-12 widget widget_tally_box">
+                            <div class="x_panel">
+                              <div class="x_title">
+                                <div class="text-right">
+                                  <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><br>
+                                </div>
+                                <h2>[logo] Nombre del jugador</h2>
+                                <div class="clearfix"></div>
+                              </div>
+
+                              <div class="x_content" style="display: block;">
+                                <div class="text-center">
+                                  <h4>Rendimiento</h4>
+                                  <span class="chart" data-percent="95">
+                                    <span class="percent">95</span>
+                                    <canvas height="110" width="110"></canvas></span>
+                                  </div>
+                                  <div class="text-center">
+                                    <h3>Stats</h3>
+                                  </div>
+                                  <table class="countries_list">
+                                    <tbody>
+                                      <tr>
+                                        <td>Partidos</td>
+                                        <td class="fs15 fw700 text-right">30</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Puntos</td>
+                                        <td class="fs15 fw700 text-right">215</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Valor</td>
+                                        <td class="fs15 fw700 text-right">55</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Valor</td>
+                                        <td class="fs15 fw700 text-right">55</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Valor</td>
+                                        <td class="fs15 fw700 text-right">55</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                          </div>
+                        </div>
+
+                        <br />
+
+                      </div>
+
+
+                      <!-- /page content -->
+
+                      <!-- footer content -->
+                      <footer>
+                        <div class="pull-right">
+                          <p>Universidad Panamericana 2018 Dases de Datos Avanzada</p>
+                        </div>
+                        <div class="clearfix"></div>
+                      </footer>
+                      <!-- /footer content -->
+                    </div>
+                  </div>
+
+                  <!-- jQuery -->
+                  <script src="vendors/jquery/dist/jquery.min.js"></script>
+                  <!-- Bootstrap -->
+                  <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+                  <!-- FastClick -->
+                  <script src="vendors/fastclick/lib/fastclick.js"></script>
+                  <!-- NProgress -->
+                  <script src="vendors/nprogress/nprogress.js"></script>
+                  <!-- Chart.js -->
+                  <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+                  <!-- gauge.js -->
+                  <script src="vendors/gauge.js/dist/gauge.min.js"></script>
+                  <!-- bootstrap-progressbar -->
+                  <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+                  <!-- iCheck -->
+                  <script src="vendors/iCheck/icheck.min.js"></script>
+                  <!-- Skycons -->
+                  <script src="vendors/skycons/skycons.js"></script>
+                  <!-- jQuery Sparklines -->
+                  <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+                  <!-- easy-pie-chart -->
+                  <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+                  <!-- bootstrap-progressbar -->
+                  <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+                  <!-- Flot -->
+                  <script src="vendors/Flot/jquery.flot.js"></script>
+                  <script src="vendors/Flot/jquery.flot.pie.js"></script>
+                  <script src="vendors/Flot/jquery.flot.time.js"></script>
+                  <script src="vendors/Flot/jquery.flot.stack.js"></script>
+                  <script src="vendors/Flot/jquery.flot.resize.js"></script>
+                  <!-- Flot plugins -->
+                  <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+                  <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+                  <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+                  <!-- DateJS -->
+                  <script src="vendors/DateJS/build/date.js"></script>
+                  <!-- JQVMap -->
+                  <script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
+                  <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+                  <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+                  <!-- bootstrap-daterangepicker -->
+                  <script src="vendors/moment/min/moment.min.js"></script>
+                  <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+                  <!-- ECharts -->
+                  <script src="vendors/echarts/dist/echarts.min.js"></script>
+                  <!-- Custom Theme Scripts -->
+                  <script src="build/js/custom.min.js"></script>
+                </body>
+                </html>

@@ -1,0 +1,11 @@
+.player {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.player:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
