@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+  <title>PickMeNba</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+  <!-- bootstrap-daterangepicker -->
+  <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+  <!-- Custom Theme Style -->
+  <link href="build/css/custom.min.css" rel="stylesheet">
+
+  <!-- NProgress -->
+  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><i class="fas fa-basketball-ball"></i> <span>PickMeNba</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a><i class="fas fa-globe"></i> NBA <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index2.html">Equipos</a></li>
+                    <li><a href="index3.html">Jugadores</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fas fa-chart-area"></i> Simuladores <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="form_validation.html">Simulador 3</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fas fa-chart-pie"></i> Comparativas <span class="fas fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="general_elements.html">Entre equipos</a></li>
+                    <li><a href="media_gallery.html">Entre Jugadores</a></li>
+                  </ul>
+                </div>
+
+              </div>
+              <!-- /sidebar menu -->
+
+              <!-- /menu footer buttons -->
+              <div class="sidebar-footer hidden-small">
+                <a data-toggle="tooltip" data-placement="top" title="Settings">
+                  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                  <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                  <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                  <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
+              </div>
+              <!-- /menu footer buttons -->
+            </div>
+          </div>
+
+          <!-- top navigation -->
+          <div class="top_nav">
+            <div class="nav_menu">
+              <nav>
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- /top navigation -->
+
+          <!-- page content -->
+          <div class="right_col" role="main">
+            <div class="">
+              <div class="page-title">
+                <div class="title_left">
+                  <h3>Vs</h3>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title" style="border: none;">
+                      <h2>Comparativas <small>Jugadores</small></h2>
+                    </div>
+                    <div class="x_content">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option value="">Elige Equipo</option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option value="">Elige Jugador</option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                          <div class="x_content">
+                      <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+                        <div class="profile_img">
+                          <div id="crop-avatar">
+                            <!-- Current avatar -->
+                            <!-- cambiar -->
+                            <img class="img-responsive avatar-view" src="images/img.jpg" alt="Jugador" title="Nombre Jugador">
+                          </div>
+                        </div>
+                        <!-- cambiar -->
+                        <h3>Nombre del jugador</h3>
+
+                        <ul class="list-unstyled user_data">
+                          <li><i class="fas fa-user"></i> Posición: XX</li>
+                        </ul>
+
+                      </div>
+
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Puntos por partido</th>
+                                <th>Asistencia por partido</th>
+                                <th>Rebotes por partido</th>
+                                <th>Bloqueos por partidos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>Lorem</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@ipsum</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Minutos por partidos</th>
+                                <th>FG3 por partidos</th>
+                                <th>FG por partidos</th>
+                                <th>FT por partidos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@dolor</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option value="">Elige Equipo</option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option value="">Elige Jugador</option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                          <div class="x_content">
+                      <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+                        <div class="profile_img">
+                          <div id="crop-avatar">
+                            <!-- Current avatar -->
+                            <!-- cambiar -->
+                            <img class="img-responsive avatar-view" src="images/img.jpg" alt="Jugador" title="Nombre Jugador">
+                          </div>
+                        </div>
+                        <!-- cambiar -->
+                        <h3>Nombre del jugador</h3>
+
+                        <ul class="list-unstyled user_data">
+                          <li><i class="fas fa-user"></i> Posición: XX</li>
+                        </ul>
+
+                      </div>
+
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Puntos por partido</th>
+                                <th>Asistencia por partido</th>
+                                <th>Rebotes por partido</th>
+                                <th>Bloqueos por partidos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>Lorem</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@ipsum</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th>Minutos por partidos</th>
+                                <th>FG3 por partidos</th>
+                                <th>FG por partidos</th>
+                                <th>FT por partidos</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@dolor</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Desempeño <small>GENERAL</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <canvas id="canvasRadar"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer>
+              <div class="pull-right">
+                <p>Universidad Panamericana 2018 Bases de Datos Avanzada</p>
+              </div>
+              <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+          </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="vendors/nprogress/nprogress.js"></script>
+        <!-- Chart.js -->
+        <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+        <!-- gauge.js -->
+        <script src="vendors/gauge.js/dist/gauge.min.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <!-- iCheck -->
+        <script src="vendors/iCheck/icheck.min.js"></script>
+        <!-- Skycons -->
+        <script src="vendors/skycons/skycons.js"></script>
+        <!-- jQuery Sparklines -->
+        <script src="vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+        <!-- easy-pie-chart -->
+        <script src="vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        <!-- bootstrap-progressbar -->
+        <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <!-- Flot -->
+        <script src="vendors/Flot/jquery.flot.js"></script>
+        <script src="vendors/Flot/jquery.flot.pie.js"></script>
+        <script src="vendors/Flot/jquery.flot.time.js"></script>
+        <script src="vendors/Flot/jquery.flot.stack.js"></script>
+        <script src="vendors/Flot/jquery.flot.resize.js"></script>
+        <!-- Flot plugins -->
+        <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+        <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <!-- DateJS -->
+        <script src="vendors/DateJS/build/date.js"></script>
+        <!-- JQVMap -->
+        <script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
+        <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+        <!-- bootstrap-daterangepicker -->
+        <script src="vendors/moment/min/moment.min.js"></script>
+        <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <!-- morris.js -->
+        <script src="vendors/raphael/raphael.min.js"></script>
+        <script src="vendors/morris.js/morris.min.js"></script>
+        <!-- ECharts -->
+        <script src="vendors/echarts/dist/echarts.min.js"></script>
+        <!-- Custom Theme Scripts -->
+        <script src="build/js/custom.min.js"></script>
+
+        <script type="text/javascript">
+        $( document ).ready(function() {
+          Morris.Donut({
+            element: 'record_10',
+            data: [
+              {label: "Victorias", value: 8},
+              {label: "Derrotas", value: 2}
+            ]
+          });
+          Morris.Donut({
+            element: 'record_temporada',
+            data: [
+              {label: "Local", value: 2},
+              {label: "Visitante", value: 1}
+            ]
+          });
+        });
+        </script>
+      </body>
+      </html>
