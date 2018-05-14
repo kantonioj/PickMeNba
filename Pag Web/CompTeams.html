@@ -62,8 +62,6 @@
                 </li>
                 <li><a><i class="fas fa-chart-area"></i> Simuladores <span class="fas fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="form.html">Simulador 1</a></li>
-                    <li><a href="form_advanced.html">Simulador 2</a></li>
                     <li><a href="form_validation.html">Simulador 3</a></li>
                   </ul>
                 </li>
@@ -123,7 +121,73 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="x_panel">
                     <div class="x_title" style="border: none;">
-                      <h2>Comparativas <small>Equipo</small></h2>
+                      <h2>Comparativas <small>Equipos</small></h2>
+                      <select class="select2_single form-control" tabindex="-1" placeholder="Equipo Local">
+                            <option></option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                          <select class="select2_single form-control" tabindex="-1" placeholder="Equipo Visitante">
+                                <option></option>
+                                <option value="AK">Alaska</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="CA">California</option>
+                                <option value="NV">Nevada</option>
+                                <option value="OR">Oregon</option>
+                                <option value="WA">Washington</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="CO">Colorado</option>
+                                <option value="ID">Idaho</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="UT">Utah</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TX">Texas</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TX">Texas</option>
+                              </select>
                     </div>
                     <div class="x_content">
 
@@ -164,25 +228,30 @@
                           </tbody>
                         </table>
                       </div>
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel">
+                              <div class="x_title" style="border: none;">
+                                <h2>Últimos 10 enfrentamientos</h2>
+                              </div>
+                              <div class="x_content2">
+                                <div id="record_10" style="width:100%; height:300px;"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                          </div>
 
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="x_panel">
-                          <div class="x_title" style="border: none;">
-                            <h2>Últimos 10 enfrentamientos</h2>
-                          </div>
-                          <div class="x_content2">
-                            <div id="record_10" style="width:100%; height:300px;"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="x_panel">
-                          <div class="x_title" style="border: none;">
-                            <h2>Enfrentamientos esta Temporada</h2>
-                          </div>
-                          <div class="x_content2">
-                            <div id="record_temporada" style="width:100%; height:300px;"></div>
+                          <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="x_panel">
+                              <div class="x_title" style="border: none;">
+                                <h2>Enfrentamientos esta Temporada</h2>
+                              </div>
+                              <div class="x_content2">
+                                <div id="record_temporada" style="width:100%; height:300px;"></div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -193,7 +262,7 @@
             </div>
             <footer>
               <div class="pull-right">
-                <p>Universidad Panamericana 2018 Dases de Datos Avanzada</p>
+                <p>Universidad Panamericana 2018 Bases de Datos Avanzada</p>
               </div>
               <div class="clearfix"></div>
             </footer>
